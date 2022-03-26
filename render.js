@@ -1,4 +1,4 @@
-const display = document.getElementById('clock');
+const clockDisplay = document.getElementById('clock');
 let catBttn = document.querySelector('#changeCatBg');
 
 catBttn.addEventListener('click', () => {
@@ -6,6 +6,7 @@ catBttn.addEventListener('click', () => {
     var filepath = "url(cat" + number + ".jpg)";
     document.body.style.backgroundImage = filepath;
 });
+
 
 function updateClock() {
     const currentDate = new Date();
@@ -19,7 +20,7 @@ function updateClock() {
     const minutesRatio = formatTime(currentDate.getMinutes());
     const hoursRatio = formatTime(currentDate.getHours());
 
-    display.innerText=`${hoursRatio} : ${minutesRatio} : ${secondsRatio}`;
+    clockDisplay.innerText=`${hoursRatio} : ${minutesRatio} : ${secondsRatio}`;
 };
 
 function formatTime (time) {
